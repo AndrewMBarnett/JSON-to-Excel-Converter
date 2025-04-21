@@ -15,11 +15,13 @@ This Python script is designed to convert JSON data into an Excel file format (.
 - `pandas`: A Python package used for data manipulation and analysis.
 - `openpyxl`: A Python package for reading and writing Excel (xlsx) files.
 
-- The script will ask if you would like to install it before running*
+- *The script will ask if you would like to install it before running*
 
 ## Installation
 
 Before running the script, make sure you have Python 3.x installed on your machine.
+
+- *The script will ask if you would like to install it before running*
 
 1. Clone or download this repository.
 2. Install the required Python packages (if they are not already installed) by running:
