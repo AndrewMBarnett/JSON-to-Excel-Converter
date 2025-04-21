@@ -1,75 +1,75 @@
 # JSON to Excel Converter Script
 
-This Python script is designed to convert JSON data into an Excel file format (.xlsx). It works on macOS, Linux, and Windows, offering a simple and interactive way to convert JSON data into a well-organized Excel spreadsheet.
+This Python script converts JSON data into an Excel file format (`.xlsx`). It works on **macOS, Linux, and Windows**, offering both interactive and command-line options for a smooth and flexible experience.
 
-## Features
+## 🔧 Features
 
-- **macOS Integration**: Interactive file and folder picker dialogs using AppleScript.
-- **Dependency Installation**: Automatically installs required Python packages (`pandas` and `openpyxl`) if not already installed.
-- **Cross-Platform**: Works on macOS, Linux, and Windows with minimal setup.
-- **Easy Conversion**: Converts any JSON file into a `.xlsx` Excel file.
+- ✅ **Cross-Platform Support**: Works seamlessly on macOS, Linux, and Windows.
+- 🧰 **Optional Command-Line Arguments**: Supports `--input` and `--output` flags to skip interactive prompts.
+- 🍎 **macOS Integration**: Uses native AppleScript dialogs for selecting files and folders.
+- 📦 **Automatic Dependency Installation**: Installs required Python packages (`pandas`, `openpyxl`) if not already installed.
+- 📁 **Smart Defaults**: If no output is specified, saves the Excel file in the same location as the JSON file.
+- 📂 **Auto Open Output Folder**: Opens the output folder automatically after conversion on all platforms.
 
-## Requirements
+## 📦 Requirements
 
 - Python 3.x
-- `pandas`: A Python package used for data manipulation and analysis.
-- `openpyxl`: A Python package for reading and writing Excel (xlsx) files.
+- `pandas`: For working with tabular data.
+- `openpyxl`: For Excel file creation and editing.
 
-- *The script will ask if you would like to install it before running*
+> ✨ **No need to manually install dependencies** — the script will offer to install them for you.
 
-## Installation
+## 📥 Installation
 
-Before running the script, make sure you have Python 3.x installed on your machine.
+1. Clone or download this repository:
+    ```bash
+    git clone https://github.com/your-repo/json-to-excel.git
+    cd json-to-excel
+    ```
 
-- *The script will ask if you would like to install it before running*
+2. (Optional) Manually install requirements:
+    ```bash
+    python3 -m pip install pandas openpyxl
+    ```
 
-1. Clone or download this repository.
-2. Install the required Python packages (if they are not already installed) by running:
+## 🚀 Usage
 
-```bash
-python3 -m pip install pandas openpyxl
-```
+### Option 1: **Interactive Mode (No flags)**
 
-## Usage
-
-### Step-by-step guide:
-
-1. **Run the script**:
-   On macOS, you can run it directly from the terminal:
+Run the script and follow the prompts:
 
 ```bash
 python3 json_to_excel.py
 ```
 
-2. **Choose your input file**:
-   - For macOS: A dialog will prompt you to select your input JSON file.
-   - For other platforms: You'll be asked to manually provide the path to your JSON file.
+- **macOS**: Native dialogs appear for file and folder selection.
+- **Other Platforms**: Prompts will appear in the terminal.
 
-3. **Choose the output folder**:
-   - For macOS: A dialog will prompt you to select the folder where you want to save the resulting Excel file.
-   - For other platforms: The script will automatically save the Excel file in the current working directory.
+### Option 2: **Command-Line Mode**
 
-4. **Conversion**:
-   - The script will read the input JSON file, convert it into a pandas DataFrame, and write it to an Excel file using `openpyxl`.
+```bash
+python3 json_to_excel.py --input /path/to/input.json --output /path/to/output.xlsx
+```
 
-5. **Output**:
-   - The script will print a confirmation message indicating the location of the saved `.xlsx` file.
-   - The output folder will be opened automatically (macOS only).
+This bypasses prompts and runs headlessly.
 
-### Example:
+### Example
 
-1. Input: `data.json`
-2. Output: `data.xlsx`
+```bash
+python3 json_to_excel.py --input ./data/myfile.json
+```
 
-## Script Flow
+Output will be saved as `./data/myfile.xlsx`.
 
-1. **macOS Dialog Helpers**: The script uses AppleScript to prompt the user for file/folder selections (only available on macOS).
-2. **Package Installation**: If `pandas` or `openpyxl` are missing, the script will prompt the user to install them.
-3. **JSON to Excel Conversion**: The script loads the input JSON, converts it into a pandas DataFrame, and then exports it to Excel.
-4. **Opening Output Folder**: After conversion, the script opens the output folder on macOS, Linux, or Windows.
+## 🔄 Script Flow
 
-## Troubleshooting
+1. **Checks Dependencies**: Installs `pandas` and `openpyxl` if needed.
+2. **Handles Input**: Reads from command-line or prompts user.
+3. **Converts JSON**: Uses `pandas` to turn JSON into an Excel spreadsheet.
+4. **Saves Output**: Exports `.xlsx` file and opens output folder.
 
-- **Missing Dependencies**: If you encounter an error related to missing dependencies (e.g., `pandas` or `openpyxl`), the script will prompt you to install them automatically.
-- **Invalid File Paths**: Ensure that the input JSON file and the chosen output folder are valid paths.
+## 🧩 Troubleshooting
 
+- **Missing Dependencies**: The script will install them if you approve.
+- **Invalid Paths**: Ensure the input file exists and is valid JSON.
+- **macOS-only Dialogs**: File/folder dialogs are only available on macOS. Other platforms fall back to terminal prompts.
